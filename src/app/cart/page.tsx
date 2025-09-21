@@ -2,7 +2,7 @@
 
 import ShippingForm from "@/components/ShippingForm"
 import PaymentForm from "@/components/PaymentForm"
-import { CartItemsType } from "@/types"
+import { CartItemsType, ShippingFormInputs } from "@/types"
 import { ArrowRight, Trash2 } from "lucide-react"
 import { useSearchParams, useRouter } from "next/navigation"
 import { useState } from "react"
@@ -85,7 +85,7 @@ const cartItems: CartItemsType = [
 const CartPage = () => {
     const searchParams = useSearchParams()
     const router = useRouter()
-    const [shippingForm, setShippingForm] = useState(null);
+    const [shippingForm, setShippingForm] = useState<ShippingFormInputs | null>(null);
 
     const activeStep = parseInt(searchParams.get("step") || "1")
 
@@ -151,7 +151,7 @@ const CartPage = () => {
                   </div>
                 ))
               ) : activeStep === 2 ? (
-                <ShippingForm />
+                <ShippingForm setShippingForm={setShippingForm} />
               ) : activeStep === 3 && shippingForm ? (
                 <PaymentForm />
               ) : (
@@ -196,11 +196,12 @@ const CartPage = () => {
                 </div>
               </div>
 
-              {activeStep === 1 && <button 
+              {activeStep === 1 && 
+              <button 
                 onClick={() => router.push("/cart?step=2", { scroll: false })}
                 className="w-full bg-gray-800 hover:bg-gray-900 transition-all 
                 duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2">
-                Continue
+                Checkout
                 <ArrowRight className="w-3 h-3" />
               </button>}
             </div>
