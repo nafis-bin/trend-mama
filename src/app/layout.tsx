@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://trend-mama-ga3i.vercel.app/",
+    url: "https://trend-mama.vercel.app/",
     title: "Trend Mama - Best Clothes",
     description: "Trending Mama is the best place to find the best fit for you, for more updates subscribe now",
     siteName: "Trend Mama",
     images: [
       {
-        url: "https://trend-mama-ga3i.vercel.app/og.png",
+        url: "https://trend-mama.vercel.app/og.png",
         width: 1200,
         height: 630,
       },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     creator: "@tokyaramen",
     title: "Trend Mama - Best Clothes",
     description: "Trending Mama is the best place to find the best fit for you, for more updates subscribe now",
-    images: ["https://trend-mama-ga3i.vercel.app/og.png"],
+    images: ["https://trend-mama.vercel.app/og.png"],
   },
   // Not directly supported by Next Metadata, so we use "other"
   other: {
