@@ -15,9 +15,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   title: "Trend Mama - Best Clothes",
-  description: "Trending Mama is the best place to find the best fit for you",
+  description: "Trending Mama is the best place to find the best fit for you, for more updates subscribe now",
+  keywords: ["shirt", "pants", "shoes", "buy clothes"],
+  authors: [{ name: "nafis bin" }],
+  robots: "index, follow",
+  icons: {
+    icon: "/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://travel-app-xi-two.vercel.app/",
+    title: "Trend Mama - Best Clothes",
+    description: "Trending Mama is the best place to find the best fit for you, for more updates subscribe now",
+    siteName: "Trend Mama",
+    images: [
+      {
+        url: "https://travel-app-xi-two.vercel.app/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@tokyaramen",
+    creator: "@tokyaramen",
+    title: "Trend Mama - Best Clothes",
+    description: "Trending Mama is the best place to find the best fit for you, for more updates subscribe now",
+    images: ["https://travel-app-xi-two.vercel.app/og.png"],
+  },
+  // Not directly supported by Next Metadata, so we use "other"
+  other: {
+    "language": "English",
+  },
 };
 
 export default function RootLayout({
