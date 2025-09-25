@@ -21,7 +21,7 @@ const product: ProductType = {
 }
 
 
-export const generateMetadata = async ({ params }: { params: {id: string}}) => {
+export const generateMetadata = async () => {
     // temp
     return {
         title: "Adidas CoreFit T-Shirt",
