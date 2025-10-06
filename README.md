@@ -10,6 +10,10 @@ A modern Nextjs frontend that displays a collection of clothes to shop. This pro
 
 - Typescript
 
+- Zod + react-form-hook 
+
+- Zustand - state management
+
 - tailwind (ES2025)
 
 - html / CSS
